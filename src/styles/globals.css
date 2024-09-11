@@ -58,3 +58,14 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+/* Fix the 'ShadCN Scrollbar of Doom' */
+/* This var gets set any time the scrollbar is removed, so we can add n
+egative or positive padding to prevent layout shift :) */
+body {
+  padding-right: calc(0 - var(--removed-body-scroll-bar-size)) !important;
+}
+
+.global-navbar {
+  padding-right: var(--removed-body-scroll-bar-size) !important;
+}
