@@ -5,6 +5,19 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: "*.scdn.co",
+        protocol: "https",
+      },
+      {
+        hostname: "*.spotifycdn.com",
+        protocol: "https",
+      },
+    ],
+  },
+};
 
 export default config;
